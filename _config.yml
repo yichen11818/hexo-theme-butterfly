@@ -19,11 +19,10 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  网站: /link/ || fa fa-heartbeat
   #  音乐: /music/ || fas fa-music
   #  照片: /Gallery/ || fas fa-images
   #  电影: /movies/ || fas fa-video
-  友链: /friends/ || fas fa-link
+  友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 
@@ -266,7 +265,7 @@ footer:
     enable: true
     since: 2023
   custom_text:  <img class="icp-icon" src="/img/3.ico"><a href="https://icp.gov.moe/?keyword=20232218" target="_blank">萌ICP备20232218号</a>
-  copyright: true # Copyright of theme and framework
+  copyright: false # Copyright of theme and framework
 
 # --------------------------------------
 # Aside Settings
@@ -548,11 +547,11 @@ addtoany:
 # --------------------------------------
 
 comments:
-  use: Livere # Valine,Disqus
-  text: false # Display the comment name next to the button
+  use: twikoo,Livere # Valine,Disqus
+  text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
+  lazyload: true
   # Display comment count in post's top_img
   count: false
   # Display comment count in Home Page
@@ -635,11 +634,11 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId:
+  envId: https://commityumi.netlify.app/.netlify/functions/twikoo
   region:
   # Use Twikoo visitor count as the page view count
   visitor: false
-  option:
+  option: 
 
 # Giscus
 # https://giscus.app/
@@ -755,6 +754,8 @@ site_verification:
   #   content: xxxxxx
   - name: baidu-site-verification
     content: codeva-wQoLfGPaAh
+  - name: baidu-site-verification
+    content: codeva-nk45Z5AWjN
 
 # --------------------------------------
 # Beautify / Effect
@@ -1153,7 +1154,7 @@ CDN:
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: custom
+  third_party_provider: unpkg
 
   # Add version number to url, true or false
   version: false
