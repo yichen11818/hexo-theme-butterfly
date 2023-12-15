@@ -138,10 +138,11 @@ post_meta:
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem
 index_top_img_height:
+# the subtitle on homepage (主頁subtitle)
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -154,7 +155,7 @@ subtitle:
   # 1 - hitokoto.cn
   # 2 - https://api.aa1.cn/doc/yiyan.html
   # 3 - jinrishici.com
-  source: false
+  source: 3
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
 
@@ -177,24 +178,7 @@ index_post_content:
   method: 2
   length: 500 # if you set method to 2 or 3, the length need to config
 
-# anchor
-anchor:
-  button:
-    enable: true
-    always_show: false
-    icon:  # the unicode value of Font Awesome icon, such as '\3423'
-  auto_update: true # when you scroll in post, the URL will update according to header id.
 
-# figcaption (圖片描述文字)
-photofigcaption: true
-
-# copy settings
-# copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
-copy:
-  enable: true
-  copyright:
-    enable: false
-    limit_count: 500
 
 # Post
 # --------------------------------------
@@ -291,13 +275,7 @@ aside:
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/yichen11818
-  card_tags:
-    enable: true
-    limit: 40 # if set 0 will show all
-    color: false
-    orderby: random # Order of tags, random/name/length
-    order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
-    sort_order: # Don't modify the setting unless you know how it works
+
   card_announcement: #公告
     enable: false
     content: This is my Blog
@@ -357,12 +335,7 @@ aside:
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
 
-# busuanzi count for PV / UV in site
-# 訪問人數
-busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+
 
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
@@ -438,14 +411,14 @@ anchor:
   # Click the headline to scroll and update the anchor
   click_to_scroll: false
 
-photofigcaption: false
+photofigcaption: true
 
 copy:
   enable: true
   # Add the copyright information after copied content
   copyright:
     enable: false
-    limit_count: 150
+    limit_count: 500
 
 # Need to install the hexo-wordcount plugin
 wordcount:
@@ -783,12 +756,7 @@ site_verification:
 #   meta_theme_color_light: "ffffff"
 #   meta_theme_color_dark: "#0d0d0d"
 
-# The top_img settings of home page
-# default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
-# The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
-index_site_info_top:
-# The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height:
+
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
@@ -825,9 +793,11 @@ enter_transitions: true
 # Default display mode - light (default) / dark
 display_mode: light
 
+
+
 # Configuration for beautifying the content of the article
 beautify:
-  enable: false
+  enable: true
   # Specify the field to beautify (site or post)
   field: post
   # Specify the icon to be used as a prefix for the title, such as '\f0c1'
@@ -838,10 +808,13 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work
 font:
-  global_font_size:
+  global_font_size: 15px
   code_font_size:
-  font_family:
-  code_font_family:
+  font_family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif
+  code_font_family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+
+
+
 
 # Font settings for the site title and site subtitle
 blog_title_font:
@@ -915,73 +888,6 @@ clickShowText:
   random: false
   mobile: false
 
-# Default display mode (網站默認的顯示模式)
-# light (default) / dark
-display_mode: light
-
-# Beautify (美化頁面顯示)
-beautify:
-  enable: true
-  field: post # site/post
-  title-prefix-icon: # '\f0c1'
-  title-prefix-icon-color: # '#F47466'
-
-# Global font settings
-# Don't modify the following settings unless you know how they work (非必要不要修改)
-font:
-  global-font-size: 15px
-  code-font-size:
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif
-  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
-
-
-# Font settings for the site title and site subtitle
-# 左上角網站名字 主頁居中網站名字
-blog_title_font: 
-  font_link:
-  font-family:
-
-# The setting of divider icon (水平分隔線圖標設置)
-hr_icon:
-  enable: true
-  icon: # the unicode value of Font Awesome icon, such as '\3423'
-  icon-top:
-
-# the subtitle on homepage (主頁subtitle)
-subtitle:
-  enable: true
-  # Typewriter Effect (打字效果)
-  effect: true
-  # Customize typed.js (配置typed.js)
-  # https://github.com/mattboldt/typed.js/#customization
-  typed_option:
-  # source: false 關閉調用
-  # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 2  調用一句網（簡體） https://yijuzhan.com/
-  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
-  # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: 3
-  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
-  sub:
-
-
-# Loading Animation (加載動畫)
-preloader:
-  enable: false
-  # source
-  # 1. fullpage-loading
-  # 2. pace (progress bar)
-  source: 1
-  # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
-
-# wordcount (字數統計)
-# see https://butterfly.js.org/posts/ceeb73f/#字數統計
-wordcount:
-  enable: false
-  post_wordcount: true
-  min2read: true
-  total_wordcount: true
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------
@@ -1160,7 +1066,7 @@ CDN:
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: unpkg
+  third_party_provider: jsdelivr
 
   # Add version number to url, true or false
   version: false
@@ -1180,7 +1086,7 @@ CDN:
     # artalk_css:
     # artalk_js:
     # blueimp_md5:
-    # busuanzi:
+    #busuanzi: https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
     # canvas_fluttering_ribbon:
     # canvas_nest:
     # canvas_ribbon:
@@ -1216,22 +1122,5 @@ CDN:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:
     # artalk_js:
-    # artalk_css:
-    # busuanzi:
     # abcjs_basic_js:
 
-# tag-plugins-plus
-# see https://akilar.top/posts/615e2dec/
-tag_plugins:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  issues: false #issues标签依赖注入开关
-  link:
-    placeholder: /img/link.png #link_card标签默认的图标图片
-  CDN:
-    anima: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    jquery: https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js #issues标签依赖
-    issues: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
-    iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
-    carousel: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
